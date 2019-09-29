@@ -1,0 +1,688 @@
+<!DOCTYPE HTML>
+<!--
+	Read Only by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Read Only by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<section id="header">
+				<header>
+					<span class="image avatar"><img src="images/pengcheng.jpg" alt="" /></span>
+					<h1 id="logo"><a href="#">Pengcheng Zhao</a></h1>
+					<p>
+						Mechanical Engineering Ph.D. Candidate<br />
+						University of Michigan<br />
+						<a href="https://roahmlab.com">ROAHM Lab</a>
+					</p>
+				</header>
+				<nav id="nav">
+					<ul>
+						<li><a href="#one" class="active">&emsp;&emsp;&emsp;About</a></li>
+						<li><a href="#two">&emsp;&emsp;&emsp;Research - Autonomous Driving</a></li>
+						<li><a href="#three">&emsp;&emsp;&emsp;Research - Robotics</a></li>
+						<li><a href="#four">&emsp;&emsp;&emsp;Research - Optimization</a></li>
+						<li><a href="#five">&emsp;&emsp;&emsp;Publications</a></li>
+						<li><a href="#six">&emsp;&emsp;&emsp;Contact Me</a></li>
+					</ul>
+				</nav>
+				<footer>
+					<ul class="icons">
+						<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li> -->
+						<!-- <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li> -->
+						<li><a href="https://www.instagram.com/roahmlab/?hl=en" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="https://github.com/pczhao" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="mailto: pczhao@umich.edu" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+				</footer>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- One -->
+							<section id="one">
+								<div class="image main" data-position="center">
+									<img src="images/banner.jpg" alt="" />
+								</div>
+								<div class="container">
+									<header class="major">
+										<h2>About</h2>
+										<!-- <p>Just an incredibly simple responsive site<br />
+										template freebie by <a href="http://html5up.net">HTML5 UP</a>.</p> -->
+									</header>
+									<h3>Bio</h3>
+									<p>
+										I am a Ph.D. candidate in Mechanical Engineering at the <a href="https://umich.edu">University of Michigan</a> advised by <a href = "http://www.roahmlab.com/ram-personal">Prof. Ram Vasudevan</a>.
+										My research interests include real-time <a href="#Theory">optimization and control</a> for <a href="#Robotics">robotic systems</a> and <a href="#AV">autonomous vehicles</a>.
+									</p>
+									<p>
+										I grew up in Daqing, China and graduated from <a href="http://en.sjtu.edu.cn/">Shanghai Jiao Tong University</a>
+										with B.S. in Mechanical Engineering (major) and Computer Science (minor) in July 2014.
+									</p>
+									<h3>Affiliations</h3>
+									<p>
+										Member of <a href="https://roahmlab.com">ROAHM Lab</a>, University of Michigan <br />
+										Member of <a href="https://fcav.engin.umich.edu">FCAV</a>, University of Michigan
+									</p>
+								</div>
+							</section>
+
+						<!-- Two -->
+							<section id="two">
+								<div id="AV" class="container">
+									<h2>Research - Autonomous Driving</h2>
+									<div class="features">
+
+										<article>
+											<div id="Segway"></div>
+											<span class="image left"><iframe width="560" height="315" src="https://www.youtube.com/embed/vmSRGDuz8x0"></iframe></span>
+											<h4>Robust Online Motion Planning for Segway Robotics Mobility Platform</h4>
+											<p>
+											This work extends and applies <a href="#Theory">optimization and control theory</a> to autonomous driving task.
+											By leveraging both online and offline computation, the proposed framework is able to keep the autonomous provably safe in real-time experiments.
+											</p>
+											<p>
+												The planning framework uses full-order model of the the vehicle to track desired trajecotries in a lower-dimensional subspace.
+												A Forward Reachable Set (FRS of the full-order model is first computed <b>offline</b> to capture all possible future states of the vehicle up to some time horizon by accounting for tracking errors.
+												This FRS is then used at run-time to map obstacles to constraints for an online MPC, which ensures safe trajectories can be picked in an <b>online</b> fashion.
+												To ease the computation burden during real time operation, obstacles are discretized;
+												and to ensure feasibility, braking maneuver is introduced as a backup controller in case of planning failure.
+												Moreover, the online MPC is solved on GPU using <a href="#BA">Parallel Bernstein Algorithm</a> to greatly improve computation speed and the chance of finding optimal solutions.
+											</p>
+											<p>
+												This method is tested on a Segway platform in an autonomous driving scenario with randomly generated obstacles,
+												and has demonstrated faster and more robust than generic methods.
+											</p>
+										</article>
+
+									</div>
+								</div>
+							</section>
+
+						<!-- Three -->
+							<section id="three">
+								<div id="Robotics" class="container">
+									<h2>Research - Robotics</h2>
+									<div class="features">
+
+										<article>
+											<div id="Cassie"></div>
+											<span class="image right"><iframe width="560" height="315" src="https://www.youtube.com/embed/Tjos-i271kY"></iframe></span>
+											<h4>Safe, Online Control for <a href="http://www.agilityrobotics.com/robots#cassie">Cassie</a> (Ongoing Work)</h4>
+											<p>
+												This work focuses on developing a safe, online MPC framework to control a robot <a href="http://www.agilityrobotics.com/robots#cassie">Cassie</a>.
+											</p>
+											<p>
+												Cassie is a 3D biped robot with 10 actuators and 20 degrees of freedom.
+												Due to Cassie's high degree of freedom, underactuation, and complex impact model, generating safety guarantees of such system online can be extremely challenging.
+												To make reasonable predictions of its future states, Cassie is first programmed to track the motion of a simplistic inverted pendulum model.
+												By combining the maximum possible tracking error to predicted motion of the simplistic model, one may obtain a hybrid Forward Reachable Set (FRS) of Cassie
+												which contains all possible behaviors of the robot up to some time horizion.
+												I am currently developing algorithm to include such FRS as safety constraints for online MPC.
+											</p>
+										</article>
+
+										<article>
+											<div id="RABBIT"></div>
+											<span class="image left"><iframe width="560" height="315" src="https://www.youtube.com/embed/BzUpWqwfxqM"></iframe></span>
+											<h4>Safe, Online Gait Design for <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=1234651">RABBIT</a> Model</h4>
+											<p>
+												This work further extends the <a href="#Segway">online motion planning framework</a> to generate an online control framework for legged robots.
+												<!-- control planar
+												<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=1234651">RABBIT</a> model in an online fashion. -->
+												Formal guarantees of safety is established for such method using reachability analysis techniques for discrete-time systems.
+											</p>
+											<p>
+												We leverage the <a href="https://jeb.biologists.org/content/202/23/3325.short">anchor and template framework</a>
+												to construct a simple model (template) whose outputs are sufficient to predict the behavior of the full model's (anchor's) outputs.
+												A parameterized Forward Reachable Set (FRS) is first computed offline to describe the evolution of the discrete-time outputs of the simple model.
+												By bounding the discrepency between template and anchor models, one may obtain an outer approximation of FRS of the full-order robot.
+												This FRS is then fed to an online MPC framework as safety constraints, which are sufficient to ensure N-step walking that does not fall over.
+											</p>
+											<p>
+												The proposed framework is implemented on a 14-dimensional model of the robot <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=1234651">RABBIT</a> as shown in the above video.
+												Unlike generic methods, this approach is capable of performing online computation while preventing the robot from falling.
+											</p>
+										</article>
+
+										<article>
+											<div id="PCbot"></div>
+											<span class="image right"><img src="images/PCbot.gif" alt="" width="560" height="373.33" /></span>
+											<h4>System Identification of <a href="https://www.youtube.com/watch?v=bnKOeMoibLg">Minitaur &trade;</a> Robot</h4>
+											<p>
+												This work involves state estimation and system identification of <a href="https://www.youtube.com/watch?v=bnKOeMoibLg">Minitaur &trade;</a> Robot.
+											</p>
+											<p>
+												The robot is programmed using embedded C to follow various footfall patterns.
+												Then, forward kinematics is computed using filtered IMU and encoder data,
+												and the robot motion is also recorded by <a href="http://phasespace.com">PhaseSpace</a> motion capture system.
+												Finally, a planar dynamical model is fit to these recorded data, and such model is verified in further experiments.
+											</p>
+										</article>
+
+									</div>
+								</div>
+							</section>
+
+						<!-- Four -->
+							<section id="four">
+								<div id="Theory" class="container">
+									<h2>Research - Optimization and Control Theory</h2>
+									<div class="features">
+
+										<article>
+											<div id="OCP"></div>
+											<span class="image left"><img src="images/Dubins.png" alt="" width="560" height="344.6" /></span>
+											<h4>Control Synthesis for Nonlinear Optimal Control via Convex Relaxations</h4>
+											<p>
+												This work addresses the problem of control synthesis for nonlinear optimal control problems in the presence of state and input constraints.
+												The proposed aproach relies upon transforming the given problem into inifinite-dimensional linear program over the space of measures,
+												and convergence to global optima is guaranteed as degree of relaxtion goes up.
+											</p>
+											<p>
+												The picture shown above is an illustration of proposed method on an LQR version of the Dubins Car problem.
+												The blue circle indicates the given initial state, and the blue dot shows the target point.
+												The ground truth solution for such problem is colored in blue, and red lines are control actions generated by our method.
+											</p>
+											<p>
+												This work can be extended to address <a href="#HOCP">hybrid optimal control</a>,
+												<a href="https://github.com/ramvasudevan/RTD">reachability analysis</a>,
+												<a href="">inverse optimal control</a>, and
+												<a href="">stochastic optimal control</a>.
+											</p>
+										</article>
+
+										<article>
+											<div id="HOCP"></div>
+											<span class="image right"><img src="images/HOCP_1.gif" alt="" width="400" height="228" />
+											<img src="images/HOCP_2.gif" alt="" width="400" height="228" /></span>
+											<h4>Hybrid Optimal Control With Guaranteed Global Convergence</h4>
+											<p>
+												Many dynamical systems may undergo instantaneous state changes due to satisfaction of certain state-dependent constraints.
+												Examples of such systems include legged robots, where the velocity of limbs changes instantaneously due to impacts with the ground,
+												and ???
+												The optimal control of hybrid systems are especially difficult to solve not only because of the discontinuity in states and controls,
+												but also due to the combinatorial nature of possible transition sequences.
+												State-of-the-art solvers struggle to find globally optimal solutions for these problems under nonliner state and input constraints.
+											</p>
+											<p>
+												This work focuses on extending the <a href="#OCP">convex relaxation-based optimal control framework</a> to solving hybrid systems.
+												By introducing measures that capture the trajectories entering and leaving each hybird modes,
+												the proposed method is able to find globally optimal trajectories regardless of transition sequence being potentially unknown.
+											</p>
+											<p>
+												As an exmpale, the proposed method is implemented to solve optimal control of a single-leg hopper, as shown in the above images.
+												The goal in the first image is to jump as high as possible, and the goal in the second image is to slow down from a large horizontal velocity.
+												Other applications include reachability analysis for hybrid systems (e.g.,  <a href="#Robotics">legged robots</a> ).
+											</p>
+										</article>
+
+										<article>
+											<div id="BA"></div>
+											<span class="image left"><img src="images/BA.gif" alt="" width="560" height="400" /></span>
+											<h4>Parallel Bernstein Algorithm for Constrained Global Optimization</h4>
+											<p>
+												In this work I developed a parallel algorithm for solving optimization problems with polynomial constraints and cost functions (a.k.a. polynomial optimization problems) using Bernstein expansion.
+												This approach relies upon bounding the values of polynomials in shrinking subsets of the domain (see the animation on the left),
+												and is able to find all global optimizers to polynomial optimization problems within polynomial time.
+											</p>
+											<p>
+												Such algorithm can be implemented on either multi-core CPUs or GPUs to significantly reduce computation time.
+												The rate of convergence of such algorithm is proved to be either linear or quadratic, depending on the problem settings,
+												and a practical bound on the maximum memory usage is provided.
+												This approach is implemented both in MATLAB (CPU) and in CUDA C++ (GPU),
+												and proven faster than generic methods on an array of benchmark examples
+												as well as in a real-world <a href="#Segway">autonomous driving planning task</a>.
+											</p>
+										</article>
+
+									</div>
+								</div>
+							</section>
+
+
+							<!-- <section id="four">
+								<div class="container">
+									<h3>Contact Me</h3>
+									<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
+									<form method="post" action="#">
+										<div class="row gtr-uniform">
+											<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
+											<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
+											<div class="col-12"><input type="text" name="subject" id="subject" placeholder="Subject" /></div>
+											<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="6"></textarea></div>
+											<div class="col-12">
+												<ul class="actions">
+													<li><input type="submit" class="primary" value="Send Message" /></li>
+													<li><input type="reset" value="Reset Form" /></li>
+												</ul>
+											</div>
+										</div>
+									</form>
+								</div>
+							</section> -->
+
+						<!-- Five -->
+							<section id="five">
+								<div class="container">
+									<h2>Publications</h2>
+									</br>
+									<h4>Academic Papers</h4>
+									<p></p>
+									<div class="inner">
+										<p>
+											J. Liu, <b>P. Zhao</b>, Z. Gan, M. Johnson-Roberson, and R. Vasudevan.
+											"Leveraging the Template and Anchor Framework for Safe, Online Robotic Gait Design".
+											<i>IEEE Robotics and Automation Letters</i>, In Review, 2019.
+										</p>
+										<p>
+											<b>P. Zhao</b>, S. Mohan, and R. Vasudevan.
+											"Optimal Control of Polynomial Hybrid Systems via Convex Relaxations".
+											<i>IEEE Transactions on Automatic Control</i>, 2019.
+											<a href="https://ieeexplore.ieee.org/abstract/document/8765411">[URL]</a>
+										</p>
+										<p>
+											<b>P. Zhao</b> and R. Vasudevan.
+											"Nonlinear Hybrid Optimal Control With Switching Costs via Occupation Measures and LMI-Relaxations".
+											<i>American Control Conference (ACC)</i>, 2019.
+											<A href="https://ieeexplore.ieee.org/abstract/document/8814753">[URL]</a>
+										</p>
+										<p>
+											<b>P. Zhao</b>, S. Mohan, and R. Vasudevan.
+											"Control Synthesis for Nonlinear Optimal Control via Convex Relaxations".
+											<i>American Control Conference (ACC)</i>, 2017.
+											<A href="https://ieeexplore.ieee.org/abstract/document/7963353">[URL]</a>
+										</p>
+									</div>
+
+									<h4>Workshop and Meeting Presentations</h4>
+									<p></p>
+									<div class="inner">
+										<p>
+											<b>P. Zhao</b>, J. Liu, Z. Gan, M. Johnson-Roberson, and R. Vasudevan.
+											"Ensuring Safe Walking During Online Motion Planning for Bipedal Robots".
+											<i>Dynamic Walking</i>, 2019
+										</p>
+										<p>
+											<b>P. Zhao</b>, S. Mohan, and R. Vasudevan.
+											"Optimal Control for Nonlinear Hybrid Systems via Convex Relaxation".
+											<i>Midwest Robotics Workshop</i>, 2019.
+										</p>
+									</div>
+								</div>
+							</section>
+
+							<section id="six">
+								<div class="container">
+									<h3>Contact Me</h3>
+									<p>
+										Feel free to contact me at <a href="mailto: pczhao@umich.edu">pczhao@umich.edu</a>
+									</p>
+								</div>
+							</section>
+
+							<!-- <section id="seven">
+								<div class="container">
+									<h3>Elements</h3>
+
+									<section>
+										<h4>Text</h4>
+										<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+										This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+										This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+										<hr />
+										<header>
+											<h4>Heading with a Subtitle</h4>
+											<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+										</header>
+										<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+										<header>
+											<h5>Heading with a Subtitle</h5>
+											<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+										</header>
+										<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+										<hr />
+										<h2>Heading Level 2</h2>
+										<h3>Heading Level 3</h3>
+										<h4>Heading Level 4</h4>
+										<h5>Heading Level 5</h5>
+										<h6>Heading Level 6</h6>
+										<hr />
+										<h5>Blockquote</h5>
+										<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+										<h5>Preformatted</h5>
+										<pre><code>i = 0;
+
+while (!deck.isInOrder()) {
+    print 'Iteration ' + i;
+    deck.shuffle();
+    i++;
+}
+
+print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+									</section>
+
+									<section>
+										<h4>Lists</h4>
+										<div class="row">
+											<div class="col-6 col-12-xsmall">
+												<h5>Unordered</h5>
+												<ul>
+													<li>Dolor pulvinar etiam magna etiam.</li>
+													<li>Sagittis adipiscing lorem eleifend.</li>
+													<li>Felis enim feugiat dolore viverra.</li>
+												</ul>
+												<h5>Alternate</h5>
+												<ul class="alt">
+													<li>Dolor pulvinar etiam magna etiam.</li>
+													<li>Sagittis adipiscing lorem eleifend.</li>
+													<li>Felis enim feugiat dolore viverra.</li>
+												</ul>
+											</div>
+											<div class="col-6 col-12-xsmall">
+												<h5>Ordered</h5>
+												<ol>
+													<li>Dolor pulvinar etiam magna etiam.</li>
+													<li>Etiam vel felis at lorem sed viverra.</li>
+													<li>Felis enim feugiat dolore viverra.</li>
+													<li>Dolor pulvinar etiam magna etiam.</li>
+													<li>Etiam vel felis at lorem sed viverra.</li>
+													<li>Felis enim feugiat dolore viverra.</li>
+												</ol>
+												<h5>Icons</h5>
+												<ul class="icons">
+													<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+													<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+													<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+													<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+													<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+													<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
+												</ul>
+											</div>
+										</div>
+										<h5>Actions</h5>
+										<ul class="actions">
+											<li><a href="#" class="button primary">Default</a></li>
+											<li><a href="#" class="button">Default</a></li>
+											<li><a href="#" class="button alt">Default</a></li>
+										</ul>
+										<ul class="actions small">
+											<li><a href="#" class="button primary small">Small</a></li>
+											<li><a href="#" class="button small">Small</a></li>
+											<li><a href="#" class="button alt small">Small</a></li>
+										</ul>
+										<div class="row">
+											<div class="col-3 col-6-medium col-12-xsmall">
+												<ul class="actions stacked">
+													<li><a href="#" class="button primary">Default</a></li>
+													<li><a href="#" class="button">Default</a></li>
+													<li><a href="#" class="button alt">Default</a></li>
+												</ul>
+											</div>
+											<div class="col-3 col-6 col-12-xsmall">
+												<ul class="actions stacked">
+													<li><a href="#" class="button primary small">Small</a></li>
+													<li><a href="#" class="button small">Small</a></li>
+													<li><a href="#" class="button alt small">Small</a></li>
+												</ul>
+											</div>
+											<div class="col-3 col-6-medium col-12-xsmall">
+												<ul class="actions stacked">
+													<li><a href="#" class="button primary fit">Default</a></li>
+													<li><a href="#" class="button fit">Default</a></li>
+													<li><a href="#" class="button alt fit">Default</a></li>
+												</ul>
+											</div>
+											<div class="col-3 col-6-medium col-12-xsmall">
+												<ul class="actions stacked">
+													<li><a href="#" class="button primary small fit">Small</a></li>
+													<li><a href="#" class="button small fit">Small</a></li>
+													<li><a href="#" class="button alt small fit">Small</a></li>
+												</ul>
+											</div>
+										</div>
+									</section>
+
+									<section>
+										<h4>Table</h4>
+										<h5>Default</h5>
+										<div class="table-wrapper">
+											<table>
+												<thead>
+													<tr>
+														<th>Name</th>
+														<th>Description</th>
+														<th>Price</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Item One</td>
+														<td>Ante turpis integer aliquet porttitor.</td>
+														<td>29.99</td>
+													</tr>
+													<tr>
+														<td>Item Two</td>
+														<td>Vis ac commodo adipiscing arcu aliquet.</td>
+														<td>19.99</td>
+													</tr>
+													<tr>
+														<td>Item Three</td>
+														<td> Morbi faucibus arcu accumsan lorem.</td>
+														<td>29.99</td>
+													</tr>
+													<tr>
+														<td>Item Four</td>
+														<td>Vitae integer tempus condimentum.</td>
+														<td>19.99</td>
+													</tr>
+													<tr>
+														<td>Item Five</td>
+														<td>Ante turpis integer aliquet porttitor.</td>
+														<td>29.99</td>
+													</tr>
+												</tbody>
+												<tfoot>
+													<tr>
+														<td colspan="2"></td>
+														<td>100.00</td>
+													</tr>
+												</tfoot>
+											</table>
+										</div>
+
+										<h5>Alternate</h5>
+										<div class="table-wrapper">
+											<table class="alt">
+												<thead>
+													<tr>
+														<th>Name</th>
+														<th>Description</th>
+														<th>Price</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Item One</td>
+														<td>Ante turpis integer aliquet porttitor.</td>
+														<td>29.99</td>
+													</tr>
+													<tr>
+														<td>Item Two</td>
+														<td>Vis ac commodo adipiscing arcu aliquet.</td>
+														<td>19.99</td>
+													</tr>
+													<tr>
+														<td>Item Three</td>
+														<td> Morbi faucibus arcu accumsan lorem.</td>
+														<td>29.99</td>
+													</tr>
+													<tr>
+														<td>Item Four</td>
+														<td>Vitae integer tempus condimentum.</td>
+														<td>19.99</td>
+													</tr>
+													<tr>
+														<td>Item Five</td>
+														<td>Ante turpis integer aliquet porttitor.</td>
+														<td>29.99</td>
+													</tr>
+												</tbody>
+												<tfoot>
+													<tr>
+														<td colspan="2"></td>
+														<td>100.00</td>
+													</tr>
+												</tfoot>
+											</table>
+										</div>
+									</section>
+
+									<section>
+										<h4>Buttons</h4>
+										<ul class="actions">
+											<li><a href="#" class="button primary">Primary</a></li>
+											<li><a href="#" class="button">Default</a></li>
+											<li><a href="#" class="button alt">Alternate</a></li>
+										</ul>
+										<ul class="actions">
+											<li><a href="#" class="button primary large">Large</a></li>
+											<li><a href="#" class="button">Default</a></li>
+											<li><a href="#" class="button alt small">Small</a></li>
+										</ul>
+										<ul class="actions fit">
+											<li><a href="#" class="button primary fit">Fit</a></li>
+											<li><a href="#" class="button fit">Fit</a></li>
+											<li><a href="#" class="button alt fit">Fit</a></li>
+										</ul>
+										<ul class="actions fit small">
+											<li><a href="#" class="button primary fit small">Fit + Small</a></li>
+											<li><a href="#" class="button fit small">Fit + Small</a></li>
+											<li><a href="#" class="button alt fit small">Fit + Small</a></li>
+										</ul>
+										<ul class="actions">
+											<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
+											<li><a href="#" class="button icon solid fa-download">Icon</a></li>
+											<li><a href="#" class="button alt icon solid fa-check">Icon</a></li>
+										</ul>
+										<ul class="actions">
+											<li><span class="button primary disabled">Primary</span></li>
+											<li><span class="button disabled">Default</span></li>
+											<li><span class="button alt disabled">Alternate</span></li>
+										</ul>
+									</section>
+
+									<section>
+										<h4>Form</h4>
+										<form method="post" action="#">
+											<div class="row gtr-uniform">
+												<div class="col-6 col-12-xsmall">
+													<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+												</div>
+												<div class="col-6 col-12-xsmall">
+													<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+												</div>
+												<div class="col-12">
+													<select name="demo-category" id="demo-category">
+														<option value="">- Category -</option>
+														<option value="1">Manufacturing</option>
+														<option value="1">Shipping</option>
+														<option value="1">Administration</option>
+														<option value="1">Human Resources</option>
+													</select>
+												</div>
+												<div class="col-4 col-12-medium">
+													<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+													<label for="demo-priority-low">Low Priority</label>
+												</div>
+												<div class="col-4 col-12-medium">
+													<input type="radio" id="demo-priority-normal" name="demo-priority">
+													<label for="demo-priority-normal">Normal Priority</label>
+												</div>
+												<div class="col-4 col-12-medium">
+													<input type="radio" id="demo-priority-high" name="demo-priority">
+													<label for="demo-priority-high">High Priority</label>
+												</div>
+												<div class="col-6 col-12-medium">
+													<input type="checkbox" id="demo-copy" name="demo-copy">
+													<label for="demo-copy">Email me a copy of this message</label>
+												</div>
+												<div class="col-6 col-12-medium">
+													<input type="checkbox" id="demo-human" name="demo-human" checked>
+													<label for="demo-human">I am a human and not a robot</label>
+												</div>
+												<div class="col-12">
+													<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+												</div>
+												<div class="col-12">
+													<ul class="actions">
+														<li><input type="submit" value="Send Message" /></li>
+														<li><input type="reset" value="Reset" class="alt" /></li>
+													</ul>
+												</div>
+											</div>
+										</form>
+									</section>
+
+									<section>
+										<h4>Image</h4>
+										<h5>Fit</h5>
+										<span class="image fit"><img src="images/banner.jpg" alt="" /></span>
+										<div class="box alt">
+											<div class="row gtr-50 gtr-uniform">
+												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
+											</div>
+										</div>
+										<h5>Left &amp; Right</h5>
+										<p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+										<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+									</section>
+
+								</div>
+							</section> -->
+
+
+					</div>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="container">
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
