@@ -2971,7 +2971,7 @@ input, select, textarea {
 		/* Image */
 
 			.image.left, .image.right {
-				max-width: 40%;
+				max-width: 50%;
 			}
 
 				.image.left img, .image.right img {
@@ -3153,11 +3153,13 @@ input, select, textarea {
 		/* Image */
 
 			.image.left {
-				margin: 0 1.5em 1em 0;
+				margin: 0 0 1em 0;
+				max-width: 100%;
 			}
 
 			.image.right {
-				margin: 0 0 1em 1.5em;
+				margin: 0 0 1em 0;
+				max-width: 100%;
 			}
 
 			.image.main {
@@ -3182,7 +3184,7 @@ input, select, textarea {
 
 			.features article .image {
 				display: block;
-				margin: 0 1em 0 0;
+				/* margin: 0 1em 0 0; */
 				padding-right: 0;
 				width: 100%;
 			}
