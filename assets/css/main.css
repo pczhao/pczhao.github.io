@@ -3167,7 +3167,7 @@ input, select, textarea {
 		/* Section/Article */
 
 			header br {
-				display: none;
+				/* display: none; */
 			}
 
 			header.major h2 {
@@ -3218,6 +3218,7 @@ input, select, textarea {
 
 					#header > header p {
 						margin: 1em 0 0 0;
+						font-size: 1em;
 					}
 
 				#header > footer {
